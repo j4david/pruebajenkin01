@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="6" branches-covered="0" branches-valid="4" complexity="0.0" version="2.1.1" timestamp="1571310015896">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="6" branches-covered="0" branches-valid="4" complexity="0.0" version="2.1.1" timestamp="1571384796732">
 	<sources>
 		<source>C:/Users/alumno.41/Documents/eclipse_workspace/pruebajenkin01/target/generated-sources/annotations</source>
 		<source>C:/Users/alumno.41/Documents/eclipse_workspace/pruebajenkin01/src/main/java</source>
@@ -20,7 +20,7 @@
 									</conditions>
 								</line>
 								<line number="55" hits="0" branch="false"/>
-								<line number="57" hits="0" branch="false"/>
+								<line number="60" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="isEstadoclass" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -49,7 +49,7 @@
 							</conditions>
 						</line>
 						<line number="55" hits="0" branch="false"/>
-						<line number="57" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
 					</lines>
 				</class>
 			</classes>

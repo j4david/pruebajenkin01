@@ -54,6 +54,9 @@ public class Historico{
 		if (Estado == 1)
 			return "CORRECTO";
 		else 
+			
+			
+			
 			return "FALLO";
 	}
 	public  void setEstado(int estado) {
