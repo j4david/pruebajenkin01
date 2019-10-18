@@ -17,18 +17,14 @@ pipeline {
     stage('Test') {
       steps {
         withMaven(globalMavenSettingsFilePath: 'C:\\Users\\alumno.41\\Documents\\Jenkins - Alumno\\maven\\conf\\settings.xml', mavenSettingsFilePath: 'C:\\Users\\alumno.41\\Documents\\Jenkins - Alumno\\maven\\conf\\settings.xml', maven: 'maven', jdk: 'jdk1.8.0_112') {
-          bat 'mvn test cobertura:cobertura -Dmaven.test.failure.ignore=true'
+          bat 'mvn test -Dmaven.test.failure.ignore=true'
         }
 
       }
     }
-    
-    
-    
-    
     stage('Cobertura') {
       steps {
-        cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'target\\surefire-reports\\cobertura\\coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
+        cobertura(coberturaReportFile: 'target\\surefire-reports\\cobertura\\coverage.xml', conditionalCoverageTargets: '70, 0, 0', lineCoverageTargets: '80, 0, 0', methodCoverageTargets: '80, 0, 0', sourceEncoding: 'ASCII')
       }
     }
   }
