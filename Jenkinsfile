@@ -22,10 +22,5 @@ pipeline {
 
       }
     }
-    stage('Cobertura') {
-      steps {
-        cobertura(coberturaReportFile: 'target\\surefire-reports\\cobertura\\coverage.xml', conditionalCoverageTargets: '70, 0, 0', lineCoverageTargets: '80, 0, 0', methodCoverageTargets: '80, 0, 0', sourceEncoding: 'ASCII')
-      }
-    }
   }
 }
