@@ -11,7 +11,7 @@ pipeline {
     }
   stage('Deploy') {
      steps {
-        deploy adapters: [tomcat7(credentialsId: 'a31d2b2e-d27b-4cbc-a848-d799ded7645d', path: '', url: 'http://localhos:8082')], contextPath: null, war: 'target/*.war'
+        deploy adapters: [tomcat7(credentialsId: 'a31d2b2e-d27b-4cbc-a848-d799ded7645d', path: '', url: 'http://localhos:8082')], contextPath: 'WebPrueba', war: 'target/*.war'
       }
    }
   }
