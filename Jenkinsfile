@@ -22,5 +22,16 @@ pipeline {
 
       }
     }
+    stage('sonar') {
+      steps {
+        withSonarQubeEnv('sonar') {
+          withMaven(globalMavenSettingsFilePath: 'C:\\Users\\alumno.41\\Documents\\Jenkins - Alumno\\maven\\conf\\settings.xml', mavenSettingsFilePath: 'C:\\Users\\alumno.41\\Documents\\Jenkins - Alumno\\maven\\conf\\settings.xml', jdk: 'JDK', maven: 'Maven') {
+            bat 'mvn sonar:sonar -Duser.home=/data/jenkins/ -Dmaven.test.failure.ignore=true'
+          }
+
+        }
+
+      }
+    }
   }
 }
